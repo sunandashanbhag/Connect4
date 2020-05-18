@@ -6,7 +6,7 @@ ROW_RANGE = 6
 COL_RANGE = 7
 
 def getBoard():
-    return np.zeros((6,7))
+    return np.zeros((ROW_RANGE,COL_RANGE))
 
 def validInput(board,col):
     return ((col<7) & (board[0][col]==0)
@@ -20,7 +20,7 @@ def getNextRow(board,col):
         i-=1
 
 def checkWin(board,row,col, turn):
-    #horizontal
+    #horizontal\
     for c in range(COL_RANGE-3):
         if set(board[row,c: c + 4])=={turn}: return True
     #vertical
