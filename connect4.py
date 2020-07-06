@@ -9,11 +9,11 @@ def getBoard():
     return np.zeros((ROW_RANGE,COL_RANGE))
 
 def validInput(board,col):
-    return ((col<7) & (board[0][col]==0)
+    return ((col<COL_RANGE) & (board[0][col]==0)
             )
 
 def getNextRow(board,col):
-    i=5
+    i=ROW_RANGE-1
     while(i>=0):
         if board[i][col]==0:
             return i
